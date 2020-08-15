@@ -1,36 +1,121 @@
 {
-  "defaultSeverity": "warning",
+  "defaultSeverity": "error",
   "extends": [
-    "tslint:recommended", 
+    "tslint:recommended",
+    "tslint-config-standard",
     "tslint-react",
-    "tslint-config-airbnb",
-    "tslint-config-prettier"
+    "tslint-config-prettier",
+    "tslint-react-hooks"
   ],
-  "jsRules": {},
   "rules": {
-    "curly": true,
-    "function-name": false,
-    "import-name": true,
-    "interface-name": false,
-    "jsx-boolean-value": false,
-    "jsx-no-multiline-js": false,
-    "member-access": false,
-    "no-console": [true, "debug", "dir", "log", "trace", "warn"],
-    "no-empty-interface": false,
-    "object-literal-sort-keys": false,
-    "object-shorthand-properties-first": false,
-    "semicolon": true,
-    "strict-boolean-expressions": false,
-    "ter-arrow-parens": false,
-    "ter-indent": true,
-    "variable-name": [
+    "align": [true, "parameters", "statements"],
+    "ban": false,
+    "class-name": true,
+    "comment-format": [true, "check-space"],
+    "curly": false,
+    "forin": true,
+    "import-name": false,
+    "indent": [true, "spaces"],
+    "jsdoc-format": true,
+    "jsx-no-lambda": {
+      "severity": "warning"
+    },
+    "label-position": true,
+    "max-line-length": [false, 140],
+    "member-access": [true, "no-public"],
+    "member-ordering": [
       true,
-      "allow-leading-underscore",
-      "allow-pascal-case",
-      "ban-keywords",
-      "check-format"
+      "variables-before-functions",
+      "public-before-private"
     ],
-    "quotemark": false
+    "react-hooks-nesting": "error",
+    "no-any": false,
+    "no-arg": true,
+    "no-bitwise": true,
+    "no-conditional-assignment": true,
+    "no-console": [
+      true,
+      "debug",
+      "error",
+      "info",
+      "log",
+      "time",
+      "timeEnd",
+      "trace",
+      "warn"
+    ],
+    "no-construct": true,
+    "no-debugger": true,
+    "no-duplicate-variable": true,
+    "no-empty": false,
+    "no-eval": true,
+    "no-inferrable-types": false,
+    "no-internal-module": false,
+    "no-require-imports": false,
+    "no-shadowed-variable": false,
+    "no-string-literal": false,
+    "no-switch-case-fall-through": false,
+    "no-trailing-whitespace": true,
+    "no-unused-expression": true,
+    "no-use-before-declare": true,
+    "no-var-keyword": true,
+    "no-var-requires": false,
+    "object-literal-sort-keys": false,
+    "one-line": [
+      true,
+      "check-open-brace",
+      "check-catch",
+      "check-else",
+      "check-whitespace"
+    ],
+    "ordered-imports": false,
+    "quotemark": [true, "single"],
+    "radix": true,
+    "semicolon": [true, "always", "ignore-bound-class-methods"],
+    "switch-default": true,
+    "trailing-comma": [
+      true,
+      {
+        "multiline": {
+          "objects": "always",
+          "arrays": "always",
+          "functions": "always"
+        },
+        "singleline": "never"
+      }
+    ],
+    "triple-equals": [true, "allow-null-check"],
+    "typedef-whitespace": [
+      true,
+      {
+        "call-signature": "nospace",
+        "index-signature": "nospace",
+        "parameter": "nospace",
+        "property-declaration": "nospace",
+        "variable-declaration": "nospace"
+      }
+    ],
+    "variable-name": false,
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-separator",
+      "check-type"
+    ]
   },
-  "rulesDirectory": []
+  "globals": {
+    "__DEV__": false
+  },
+  "linterOptions": {
+    "exclude": [
+      "android",
+      "ios",
+      "package.json",
+      "ledger-api-js-lib",
+      "*.json",
+      "**/*.json"
+    ]
+  }
 }
